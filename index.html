@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Museo Comunitario Yiee Roo de Macuilxochilt</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    #header {
+      background-color: black;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    #title {
+      color: white;
+      font-size: 24px;
+    }
+    
+    #contact-btn {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    #hero-section {
+      background-image: url('path_to_image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #hero-section h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    
+    #hero-section p {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    #sculpture-gallery {
+      background-color: #333;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .sculpture-image {
+      max-width: 200px;
+      margin: 0 10px;
+    }
+    
+    #museum-info {
+      padding: 40px;
+      background-color: #555;
+    }
+    
+    #map-section {
+      position: relative;
+    }
+    
+    #map-text {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      font-size: 18px;
+    }
+    
+    #contact-section {
+      background-color: #777;
+      padding: 40px;
+    }
+    
+    #contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    #contact-form input,
+    #contact-form textarea {
+      margin-bottom: 16px;
+      padding: 8px;
+      width: 100%;
+    }
+    
+    #contact-form button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+    
+    #about-section {
+      padding: 40px;
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1 id="title">Museo Comunitario Yiee Roo de Macuilxochilt</h1>
+    <a id="contact-btn" href="mailto:museoyieeroom@gmail.com">Contáctanos</a>
+  </header>
+
+  <section id="hero-section">
+    <h2>Explorar la Cultura: Museo Comunitario Yiee Roo de Macuilxochilt</h2>
+    <p>Es una experiencia única para explorar la cultura local de la región. Ofrecemos una variedad de exposiciones y eventos educativos para ayudar a todos los visitantes a comprender y disfrutar la cultura del lugar. Ven y descubre la rica historia y tradiciones de la región de Santa Ana Del Valle.</p>
+    <a class="button" href="https://drive.google.com/file/d/1DDX7PwFhnWITttZrjlb5b4_WL0C_oWkr/view?usp=sharing">Escuchar recorrido</a>
+  </section>
+
+  <section id="sculpture-gallery">
+    <img class="sculpture-image" src="sculpture1.jpg" alt="Sculpture 1">
+    <img class="sculpture-image" src="sculpture2.jpg" alt="Sculpture 2">
+    <img class="sculpture-image" src="sculpture3.jpg" alt="Sculpture 3">
+  </section>
+
+  <section id="museum-info">
+    <p>Visitar el Museo Comunitario Yiee Roo de Macuilxochilt en México es una experiencia única. La exhibición se enfoca en la cultura local y la historia de la comunidad. Los guías son muy amables y serviciales, se siente un ambiente muy cómodo durante toda la visita. Se recomienda altamente para cualquier persona interesada en aprender más sobre la cultura mexicana.</p>
+  </section>
+
+  <section id="map-section">
+    <div id="map"></div>
+    <div id="map-text">
+      ¡Visítanos en Macuilxochilt, Oaxaca!
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <h2>Formulario de Contacto de Museo Comunitario Yiee Roo de Macuilxochilt</h2>
+    <p>Comunícate con nosotros a través del formulario de contacto para cualquier pregunta o solicitud de información.</p>
+    <form id="contact-form" action="submit_form.php" method="post">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="message" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="about-section">
+    <textarea readonly>
+      Visita nuestro Museo Comunitario Yiee Roo de Macuilxochilt
+      Nuestro Museo ofrece una experiencia única de aprendizaje e interactiva entre la comunidad. Nuestro Museo es un lugar para contar historias, compartir conocimientos y aprender sobre nuestra cultura.
+    </textarea>
+    <a class="button" href="https://drive.google.com/file/d/1u1AVlCQnCi9WgHD4J84g3NKpYD6SNNA/view?usp=sharing">VISITA NUESTRO RECORRIDO VIRTUAL</a>
+  </section>
+
+  <script>
+    // Add your Google Maps API code here to display the map
+  </script>
+</body>
+</html>
