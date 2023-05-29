@@ -97,7 +97,7 @@
     }
     
     .gallery img {
-      width: 600px;
+      width: 50px;
       height: auto;
       margin-right: 10px;
       border-radius: 10px;
@@ -216,7 +216,16 @@
   <section class="section">
     <h2>RECORRIDO VIRTUAL</h2>
     <div class="gallery">
-      <img src="_MG_3087.jpg" alt="Escultura 1">
+    <img src="_MG_3087.jpg.jpg" alt="Imagen" onclick="openPopup()">
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Información de la imagen</h2>
+      <p>Aquí puedes agregar la información que deseas mostrar sobre la imagen.</p>
+      <button class="button">Reproducir audio</button>
+    </div>
+  </div>
+      
       <img src="_MG_3093.jpg" alt="Escultura 2">
       <img src="_MG_3100.jpg" alt="Escultura 3">
       <img src="_MG_3102.jpg" alt="Escultura 4">
@@ -331,6 +340,18 @@
       if (currentAudio) {
         currentAudio.pause();
       }
+    }
+  </script>
+  
+  <script>
+    function openPopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "block";
+    }
+    
+    function closePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
     }
   </script>
 </body>
