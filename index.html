@@ -97,7 +97,7 @@
     }
     
     .gallery img {
-      width: 50px;
+      width: 200px;
       height: auto;
       margin-right: 10px;
       border-radius: 10px;
@@ -215,45 +215,12 @@
   
   <section class="section">
     <h2>RECORRIDO VIRTUAL</h2>
-    <div class="gallery">
-      
+    <div class="gallery">  
       <img src="_MG_3087.jpg" alt="Escultura 1" onclick="openPopup('Información de la imagen 1')">
       <img src="_MG_3093.jpg" alt="Escultura 2" onclick="openPopup('Información de la imagen 2')">
       <img src="_MG_3100.jpg" alt="Escultura 3" onclick="openPopup('Información de la imagen 3')">
       <img src="_MG_3102.jpg" alt="Escultura 4">
       <img src="_MG_3103.jpg" alt="Escultura 5">
-      <img src="_MG_3104.jpg" alt="Escultura 6">
-      <img src="_MG_3105.jpg" alt="Escultura 7">
-      <img src="_MG_3107.jpg" alt="Escultura 8">
-      <img src="_MG_3108.jpg" alt="Escultura 9">
-      <img src="_MG_3110.jpg" alt="Escultura 10">
-      <img src="_MG_3111.jpg" alt="Escultura 11">
-      <img src="_MG_3116.jpg" alt="Escultura 12">
-      <img src="_MG_3119.jpg" alt="Escultura 13">
-      <img src="_MG_3120.jpg" alt="Escultura 14">
-      <img src="_MG_3123.jpg" alt="Escultura 15">
-      <img src="_MG_3124.jpg" alt="Escultura 16">
-      <img src="_MG_3128.jpg" alt="Escultura 17">
-      <img src="_MG_3129.jpg" alt="Escultura 18">
-      <img src="_MG_3130.jpg" alt="Escultura 19">
-      <img src="_MG_3135.jpg" alt="Escultura 20">
-      <img src="_MG_3137.jpg" alt="Escultura 21">
-      <img src="_MG_3139.jpg" alt="Escultura 22">
-      <img src="_MG_3144.jpg" alt="Escultura 23">
-      <img src="_MG_3153.jpg" alt="Escultura 24">
-      <img src="_MG_3158.jpg" alt="Escultura 25">
-      <img src="_MG_3159.jpg" alt="Escultura 26">
-      <img src="_MG_3166.jpg" alt="Escultura 27">
-      <img src="_MG_3170.jpg" alt="Escultura 28">
-      <img src="_MG_3175.jpg" alt="Escultura 29">
-      <img src="_MG_3178.jpg" alt="Escultura 30">
-      <img src="_MG_3183.jpg" alt="Escultura 31">
-      <img src="_MG_3188.jpg" alt="Escultura 32">
-      <img src="_MG_3189.jpg" alt="Escultura 33">
-      <img src="_MG_3195.jpg" alt="Escultura 34">
-      <img src="_MG_3198.jpg" alt="Escultura 35">
-      <img src="_MG_3204.jpg" alt="Escultura 36">
-      <img src="_MG_3221.jpg" alt="Escultura 37">      
     </div>
     
     <div class="image-bullets">
@@ -281,13 +248,12 @@
  
   </section>
   
-<section class="section">
-  <h2>Nuestra Ubicación</h2>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9331.186064867366!2d-96.6483121660624!3d16.8663053151221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c703b89c444bcb%3A0x7c2a2cda84cfc548!2sC.%20El%20Rosario%2C%2071246%20Macuilxochilt%20Oax.!5e0!3m2!1sen!2smx!4v1626215139581!5m2!1sen!2smx" frameborder="0" allowfullscreen></iframe>
-    <div class="map-text">¡Visítanos en Macuilxochilt, México!</div>
-  </div>
-</section>
+  <section class="section">
+    <h2>Nuestra Ubicación</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9331.186064867366!2d-96.6483121660624!3d16.8663053151221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c703b89c444bcb%3A0x377b9ac62b172c46!2sMacuilxochitl%2C%20Santa%20Ana%20del%20Valle%2C%20Oax.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1614185266703!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
   
   <section class="section">
     <h2>Formulario de Contacto</h2>
@@ -305,47 +271,38 @@
   </section>
   
   <footer>
-    <p>&copy; 2023 Museo Comunitario Yiee Roo de Macuilxochilt | Todos los derechos reservados</p>
+    <p>Derechos Reservados &copy; 2023 Museo Comunitario Yiee Roo de Macuilxochilt</p>
   </footer>
   
-<script>
-    var currentAudio;
-
+  <script>
+    var audioElement;
+    
     function playAudio(language) {
-      if (currentAudio) {
-        currentAudio.pause();
+      if (audioElement) {
+        audioElement.pause();
       }
-
-      var audio = new Audio();
-      if (language === 'espanol') {
-        audio.src = 'Macuilxóchitl_esp.mp3';
-      } else if (language === 'ingles') {
-        audio.src = 'Macuilxóchitl_ing.mp3';
-      } else if (language === 'zapoteco') {
-        audio.src = 'audio_zapoteco.mp3';
+      
+      switch (language) {
+        case 'espanol':
+          audioElement = new Audio('audio/espanol.mp3');
+          break;
+        case 'ingles':
+          audioElement = new Audio('audio/ingles.mp3');
+          break;
+        case 'zapoteco':
+          audioElement = new Audio('audio/zapoteco.mp3');
+          break;
+        default:
+          return;
       }
-      audio.play();
-      currentAudio = audio;
+      
+      audioElement.play();
     }
-
+    
     function pauseAudio() {
-      if (currentAudio) {
-        currentAudio.pause();
+      if (audioElement) {
+        audioElement.pause();
       }
-    }
-  
-    function openPopup(description) {
-      var popup = document.getElementById("popup");
-      var popupContent = document.getElementById("popup-content");
-      var popupDescription = document.getElementById("popup-description");
-
-      popupDescription.innerText = description;
-      popup.style.display = "block";
-    }
-
-    function closePopup() {
-      var popup = document.getElementById("popup");
-      popup.style.display = "none";
     }
   </script>
 </body>
