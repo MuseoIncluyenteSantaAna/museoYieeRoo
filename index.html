@@ -142,43 +142,32 @@
       border-radius: 10px;
     }
     
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px;
+    .contact-section {
+      background-color: #222222;
+      padding: 40px;
+      margin: 20px;
     }
-    
-    .contact-form input,
-    .contact-form textarea {
-      margin-bottom: 10px;
-      padding: 10px;
-      font-size: 18px;
-      border-radius: 5px;
-      border: 1px solid #dddddd;
+    .contact-section input,
+    .contact-section textarea {
       width: 100%;
-      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #333333;
+      border: none;
+      color: white;
     }
-    
-    .contact-form textarea {
-      resize: vertical;
+    .contact-section textarea {
       height: 150px;
     }
-    
-    .contact-form button {
-      background-color: #555555;
-      color: white;
-      padding: 10px 20px;
+    .contact-section button {
+      background-color: #2ecc71;
+      color: black;
+      padding: 12px 24px;
       font-size: 18px;
+      text-decoration: none;
+      border-radius: 25px;
       border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 150px;
-      align-self: flex-end;
-    }
-    
-    .contact-form button:hover {
-      background-color: #777777;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
     
     .image-bullets {
@@ -290,25 +279,23 @@
     </div> 
   </section>
   
-  <section class="section">
-    <h2>Nuestra Ubicación</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9331.186064867366!2d-96.6483121660624!3d16.8663053151221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c703b89c444bcb%3A0x377b9ac62b172c46!2sMacuilxochitl%2C%20Santa%20Ana%20del%20Valle%2C%20Oax.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1614185266703!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
+ <div class="map-section">
+    <h2 class="section-title" style="font-size: 24px;">Nuestra ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30521.206728467914!2d-96.54069056754237!3d17.016269617105618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c72fcbd065c68b%3A0x7e560d9dc4453952!2sMuseo%20Comunitario%20%22San%20Mateo%20Macuilx%C3%B3chitl%22!5e0!3m2!1ses!2smx!4v1686015318106!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
   
-  <section class="section">
-    <h2>Formulario de Contacto</h2>
- <div class="contact-form">
-  <p>Comunícate con nosotros a través del formulario de contacto de Museo Comunitario Yiee Roo de Macuilxochilt para cualquier pregunta o solicitud de información.</p>
-  <form action="enviar_formulario.php" method="POST">
-    <input type="text" id="name" name="name" placeholder="Nombre">
-    <input type="email" id="email" name="email" placeholder="Correo">
-    <textarea id="message" name="message" placeholder="Mensaje"></textarea>
-    <button class="button" type="submit">Enviar</button>
-  </form>
-</div>
-  </section>
+  <div class="contact-section">
+    <h2 class="section-title" style="font-size: 24px;">Formulario de Contacto</h2>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Mensaje:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="Enviar" class="button">
+    </form>
+  </div>
 
   </section>
   
